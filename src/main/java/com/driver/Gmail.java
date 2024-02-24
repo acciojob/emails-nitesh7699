@@ -46,7 +46,7 @@ public class Gmail extends Email {
         // Each message is distinct
         // If the given message is found in any mail in the inbox, move the mail to trash, else do nothing
 
-        inbox.removeIf(mail -> mail.getMessage().equals(message));
+//        inbox.removeIf(mail -> mail.getMessage().equals(message));
         //inbox.removeIf(mail -> mail.getMessage().equals(message));
         for (int i = 0; i < inbox.size(); i++) {
             Mail mail = inbox.get(i);
