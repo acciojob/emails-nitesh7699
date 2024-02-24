@@ -46,10 +46,10 @@ public class Email {
     private boolean isValidPassword(String newPassword) {
         // Check if the new password meets the criteria
         boolean isContain = newPassword.length() >= 8 &&
-                newPassword.matches(".[A-Z].") &&
-                newPassword.matches(".[a-z].") &&
-                newPassword.matches(".\\d.") &&
-                newPassword.matches(".[^a-zA-Z0-9].");
+                newPassword.matches(".*[A-Z].*") &&
+                newPassword.matches(".*[a-z].*") &&
+                newPassword.matches(".*\\d.*") &&
+                newPassword.matches(".*[^a-zA-Z0-9].*");
         return isContain;
     }
 }

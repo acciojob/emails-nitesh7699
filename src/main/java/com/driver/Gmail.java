@@ -23,8 +23,6 @@ public class Gmail extends Email {
     }
 
 
-
-
     public void receiveMail(Date date, String sender, String message){
         // If the inbox is full, move the oldest mail in the inbox to trash and add the new mail to inbox.
         // It is guaranteed that:
@@ -81,21 +79,11 @@ public class Gmail extends Email {
     public int findMailsBetweenDates(Date start, Date end) {
         //find number of mails in the inbox which are received between given dates
         //It is guaranteed that start date <= end date
-//        int count = 0;
-//        for (Mail mail : inbox) {
-//            if (mail.getDate().after(start) && mail.getDate().before(end)) {
-//                count++;
-//            }
-//        }
-//        return count;
         int count = 0;
         for (Mail mail : inbox) {
-            if (mail.getDate().after(start) && mail.getDate().before(end)) {
-                if (mail.getDate().compareTo(start) >= 0 && mail.getDate().compareTo(end) <= 0) {
-                    count++;
-                }
+            if (mail.getDate().compareTo(start) >= 0 && mail.getDate().compareTo(end) <= 0) {
+                count++;
             }
-//            return count;
         }
         return count;
     }
